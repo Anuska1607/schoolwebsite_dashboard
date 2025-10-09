@@ -1,0 +1,343 @@
+/* Newsletter Section */
+.newsletter-section {
+  padding: 40px;
+  background-color: #ffffff;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.newsletter-section h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.newsletter-content h3 {
+  font-size: 22px;
+  color: #34495e;
+  margin-top: 25px;
+}
+
+.newsletter-content p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.newsletter-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.newsletter-content ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.newsletter-content form {
+  margin-top: 20px;
+}
+
+.newsletter-content input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* Newsletter Archive Section */
+.newsletter-archive {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.newsletter-archive h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.archive-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.issue {
+  background-color: #fff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.issue img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.issue h4 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.issue p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+body{
+          font-family: Arial;
+          margin: 0;
+          padding: 0;
+          background-image:url(schoolpolicy.jpg);
+background-position: center;
+background-size: cover;
+font-family: sans-serif;
+          
+
+}
+
+.wrapper{
+           background: url(schoolpolicy.jpg);
+           background-repeat:no-repeat;
+           background-size:cover;
+           background-position:center;
+           height: 30rem;
+
+}
+
+ nav{
+           width: 100%;
+           height: 80px;
+           background-color: #000000;
+             padding: 10px 0;
+           line-height: 80px;
+}
+
+nav ul{
+         list-style: none;
+        display: flex;
+         justify-content: center;
+          flex-wrap: wrap;
+          margin: 0;
+       padding: 0;
+}
+
+nav ul li{
+       position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a{
+       text-decoration: none;
+       color: #ffffff;
+       padding: 0px;
+       display: block;
+       font-weight: bold;
+}
+
+img{
+       width:14%;
+       margin-left:1.9rem;
+       margin-top: 0%;
+}
+
+nav ul li:hover > a{
+       background-color: orange;
+       font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 5px;
+}
+
+
+
+.active, .nav ul li:hover {
+ background: black;
+
+}
+
+.wrapper, .fa {
+margin-right: 10px;
+}
+
+.sub-menu-1 {
+   display: none;
+  position: absolute;
+  background-color: orange;
+  top: 40px;
+  left: 0;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+nav ul li:hover .sub-menu-1 {
+ display:flex;
+
+}
+.sub-menu-1 ul {
+  padding: 10px;
+}
+
+.sub-menu-1 ul li {
+  margin: 5px 0;
+}
+*{
+margin: 0;
+padding: 0;
+}
+
+.issue img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.issue h4 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.issue p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+footer {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .newsletter-section,
+  .newsletter-archive {
+    padding: 20px;
+    margin: 20px 10px;
+    max-width: 100%;
+  }
+
+  .newsletter-section h2,
+  .newsletter-archive h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .newsletter-content h3 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .newsletter-content p,
+  .newsletter-content ul li {
+    font-size: 14px;
+  }
+
+  .newsletter-content ul {
+    padding-left: 10px;
+  }
+
+  .newsletter-content input[type="email"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .archive-grid {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .issue {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .issue img {
+    height: auto;
+  }
+
+  .issue h4 {
+    font-size: 18px;
+  }
+
+  .issue p {
+    font-size: 13px;
+  }
+
+   nav {
+    height: auto;
+    line-height: normal;
+    padding: 10px;
+  }
+
+  nav ul {
+    float: none;
+    text-align: center;
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    display: block;
+  }
+
+  nav ul li:hover > a {
+  background-color: #0066cc;
+  border-radius: 5px;
+}
+
+  img {
+    width: 50%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .wrapper {
+    height: auto;
+  }
+
+
+
+footer {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+
+  .sub-menu-1 {
+    position: static;
+    background: #000;
+  }
+
+  nav ul li:hover .sub-menu-1 {
+    display: block;
+    text-align: center;
+  }
+
+}
+

@@ -1,0 +1,303 @@
+body{
+          font-family: Arial;
+          margin: 0;
+          padding: 0;
+          background-image:url(schoolpolicy.jpg);
+background-position: center;
+background-size: cover;
+font-family: sans-serif;       
+}
+
+.wrapper{
+           background: url(schoolpolicy.jpg);
+           background-repeat:no-repeat;
+           background-size:cover;
+           background-position:center;
+           height: 30rem;
+            margin: auto;
+}
+
+ nav{
+           width: 100%;
+           height: 80px;
+           background-color: #000000;
+             padding: 10px 0;
+           line-height: 80px;
+}
+
+nav ul{
+         list-style: none;
+        display: flex;
+         justify-content: center;
+          flex-wrap: wrap;
+          margin: 0;
+       padding: 0;
+}
+
+nav ul li{
+       position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a{
+       text-decoration: none;
+       color: #ffffff;
+       padding: 0px;
+       display: block;
+       font-weight: bold;
+}
+
+img{
+       width:14%;
+       margin-left:1.9rem;
+       margin-top: 0%;
+}
+
+nav ul li:hover > a{
+       background-color: orange;
+       font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 5px;
+}
+
+
+
+.active, .nav ul li:hover {
+ background: black;
+
+}
+
+.wrapper, .fa {
+margin-right: 10px;
+}
+
+.sub-menu-1 {
+   display: none;
+  position: absolute;
+  background-color: orange;
+  top: 40px;
+  left: 0;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+nav ul li:hover .sub-menu-1 {
+ display:block;
+
+}
+.sub-menu-1 ul {
+  padding: 10px;
+}
+
+.sub-menu-1 ul li {
+  margin: 5px 0;
+}
+*{
+margin: 0;
+padding: 0;
+}
+
+
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2em;
+  color: #004080;
+}
+
+/* Buttons */
+.btn-1 {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: oran;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-1:hover {
+  background-color: #0066cc;
+}
+
+/* Features section */
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.features button {
+  padding: 10px 15px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.features button:hover {
+  background-color: #d0d0d0;
+}
+
+/* Footer */
+footer {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  nav {
+    height: auto;
+    line-height: normal;
+    padding: 10px;
+  }
+
+  nav ul {
+    float: none;
+    text-align: center;
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    display: block;
+  }
+
+  nav ul li:hover > a {
+  background-color: #0066cc;
+  border-radius: 5px;
+}
+
+  img {
+    width: 50%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .wrapper {
+    height: auto;
+  }
+
+  .calendar-controls select,
+  .calendar-controls button {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  table {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .btn-1 {
+    width: 80%;
+  }
+
+  .sub-menu-1 {
+    position: static;
+    background: #000;
+  }
+
+  nav ul li:hover .sub-menu-1 {
+    display: block;
+    text-align: center;
+  }
+  #slider {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+
+  #slider figure {
+    width: 500%; /* 5 images, each 100% width */
+    animation: slideMobile 20s infinite;
+  }
+
+  #slider img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  @keyframes slideMobile {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
+  }
+
+
+
+}
+/* Calendar table */
+table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #761460;
+  color: white;
+}
+
+td a {
+  color: #640f3b;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+/* Slider */
+#slider {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+#slider figure {
+  display: flex;
+  animation: slide 20s infinite;
+}
+
+#slider img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Slider Animation */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-100%); }
+  40% { transform: translateX(-200%); }
+  60% { transform: translateX(-300%); }
+  80% { transform: translateX(-400%); }
+  100% { transform: translateX(0); }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar of Events</title>
+  <link rel="stylesheet" href="style.calender.css" />
+  <style>
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+    select, button {
+      margin: 10px;
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+    .calendar-controls {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo4.jpg" height="80" width="100" align="left" />
+  <div class="wrapper">
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li class="active">
+           <a href="#"><i class="fa fa-abo">ABOUT</i></a>
+          <div class="sub-menu-1">
+            <ul>
+              <li><a href="schoolinformation.html">SCHOOL INFORMATION</a></li><br />
+              <li><a href="schoolpolicy.html">SCHOOL POLICY</a></li>
+            </li></ul>
+          </div>
+        <li class="active">
+          <a href="#"><i class="fa fa-act">ACTIVITY</i></a>
+          <div class="sub-menu-1">
+            <ul>
+              <li><a href="extracurricular.html">EXTRA CURRICULAR ACTIVITIES</a></li><br />
+              <li><a href="newsletter.html">NEWSLETTERS</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="active">
+          <a href="#"><i class="fa fa-eve">EVENTS</i></a>
+          <div class="sub-menu-1">
+            <ul>
+              <li><a href="calendar.html">CALENDAR OF EVENTS</a></li><br />
+              <li><a href="parentinvolvement.html">PARENT INVOLVEMENT</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="login.html">LOG IN</a></li>
+        <li><a href="contact us.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- Calendar Section -->
+    <section>
+    
+      <h1 align="center">SCHOOL CALENDAR OF EVENTS</h1>
+
+      <div class="calendar-controls">
+        <label for="monthFilter">Filter by Month:</label>
+        <select id="monthFilter" onchange="filterEvents()">
+          <option value="all">All</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+
+        <button onclick="downloadCSV()">Download Calendar</button>
+      </div>
+
+      <table id="eventTable">
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+          <th>Details</th>
+          <th>Google Calendar</th>
+        </tr>
+        <tr>
+          <td>15th August</td>
+          <td>Independence Day Celebration</td>
+          <td>Flag hoisting, cultural performances, and speeches</td>
+          <td><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Independence+Day+Celebration&dates=20250815T090000/20250815T110000&details=Flag+hoisting,+cultural+performances,+and+speeches" target="_blank">Add</a></td>
+        </tr>
+        <tr>
+          <td>5th September</td>
+          <td>Teacher's Day</td>
+          <td>Student-led tribute and fun activities for teachers</td>
+          <td><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Teacher's+Day&dates=20250905T090000/20250905T110000&details=Student-led+tribute+and+fun+activities+for+teachers" target="_blank">Add</a></td>
+        </tr>
+        <tr>
+          <td>2nd October</td>
+          <td>Gandhi Jayanti</td>
+          <td>Cleanliness drive and peace march</td>
+          <td><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Gandhi+Jayanti&dates=20251002T090000/20251002T110000&details=Cleanliness+drive+and+peace+march" target="_blank">Add</a></td>
+        </tr>
+        <tr>
+          <td>14th November</td>
+          <td>Children's Day</td>
+          <td>Games, talent show, and special lunch</td>
+          <td><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Children's+Day&dates=20251114T090000/20251114T110000&details=Games,+talent+show,+and+special+lunch" target="_blank">Add</a></td>
+        </tr>
+        <tr>
+          <td>20th December</td>
+          <td>Winter Carnival</td>
+          <td>Stalls, music, and student exhibitions</td>
+          <td><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Winter+Carnival&dates=20251220T090000/20251220T110000&details=Stalls,+music,+and+student+exhibitions" target="_blank">Add</a></td>
+        </tr>
+      </table>
+    </section>
+<br><br><br><br><br><br>
+    
+    <footer>
+      <p>Copyright &copy;</p>
+    </footer>
+    
+  </div>
+
+  <script>
+    function filterEvents() {
+      const selectedMonth = document.getElementById("monthFilter").value;
+      const rows = document.querySelectorAll("#eventTable tr");
+
+      rows.forEach((row, index) => {
+        if (index === 0) return;
+        const dateCell = row.cells[0].textContent;
+        row.style.display = selectedMonth === "all" || dateCell.includes(selectedMonth) ? "" : "none";
+      });
+    }
+
+    function downloadCSV() {
+      const rows = document.querySelectorAll("#eventTable tr");
+      let csv = "";
+
+      rows.forEach(row => {
+        const cols = row.querySelectorAll("td, th");
+        const rowData = Array.from(cols).map(col => `"${col.textContent}"`).join(",");
+        csv += rowData + "\n";
+      });
+
+      const blob = new Blob([csv], { type: "text/csv" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "school_calendar.csv";
+      link.click();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+body{
+          font-family: Arial;
+          margin: 0;
+          padding: 0;
+          background-image:url(schoolpolicy.jpg);
+background-position: center;
+background-size: cover;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+          
+
+}
+
+.wrapper{
+           background: url(schoolpolicy.jpg);
+           background-repeat:no-repeat;
+           background-size:cover;
+           background-position:center;
+           height: 30rem;
+
+}
+
+ nav{
+           width: 100%;
+           height: 80px;
+           background-color: #000000;
+             padding: 10px 0;
+           line-height: 80px;
+}
+
+nav ul{
+         list-style: none;
+        display: flex;
+         justify-content: center;
+          flex-wrap: wrap;
+          margin: 0;
+       padding: 0;
+}
+
+nav ul li{
+       position: relative;
+  margin: 0 15px;
+}
+
+nav ul li a{
+       text-decoration: none;
+       color: #ffffff;
+       padding: 0px;
+       display: block;
+       font-weight: bold;
+}
+
+img{
+       width:14%;
+       margin-left:1.9rem;
+       margin-top: 0%;
+}
+
+nav ul li:hover > a{
+       background-color: orange;
+       font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 5px;
+}
+
+
+
+.active, .nav ul li:hover {
+ background: black;
+
+}
+
+.wrapper, .fa {
+margin-right: 10px;
+}
+
+.sub-menu-1 {
+   display: none;
+  position: absolute;
+  background-color: orange;
+  top: 40px;
+  left: 0;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+nav ul li:hover .sub-menu-1 {
+ display:flex;
+
+}
+.sub-menu-1 ul {
+  padding: 10px;
+}
+
+.sub-menu-1 ul li {
+  margin: 5px 0;
+}
+*{
+margin: 0;
+padding: 0;
+}
+
+footer {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+/* Info & Policy Sections */
+.info-section, .policy-section {
+  padding: 40px;
+  background-color: #ffffff;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.info-section h2, .policy-section h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info-content h3, .policy-content h3 {
+  font-size: 22px;
+  color: #34495e;
+  margin-top: 25px;
+}
+
+.info-content p, .policy-content p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.info-content ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.info-content ul li {
+  margin-bottom: 8px;
+}
+
+/* Map Embed */
+iframe {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Footer */
+
+
+@media screen and (max-width: 768px) {
+   nav {
+    height: auto;
+    line-height: normal;
+    padding: 10px;
+  }
+
+  nav ul {
+    float: none;
+    text-align: center;
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    display: block;
+  }
+
+  nav ul li:hover > a {
+  background-color: #0066cc;
+  border-radius: 5px;
+}
+
+  img {
+    width: 50%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .wrapper {
+    height: auto;
+  }
+
+
+
+
+  .sub-menu-1 {
+    position: static;
+    background: #000;
+  }
+
+  nav ul li:hover .sub-menu-1 {
+    display: block;
+    text-align: center;
+  }
+
+
+  .wrapper {
+    height: auto;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .info-section, .policy-section {
+    padding: 20px;
+    margin: 20px 10px;
+    max-width: 100%;
+  }
+
+  .info-section h2, .policy-section h2 {
+    font-size: 22px;
+  }
+
+  .info-content h3, .policy-content h3 {
+    font-size: 18px;
+  }
+
+  .info-content p, .policy-content p {
+    font-size: 14px;
+  }
+
+  .info-content ul {
+    padding-left: 15px;
+  }
+
+  .info-content ul li {
+    font-size: 14px;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
